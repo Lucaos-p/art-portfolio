@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       Art Portfolio — index.html
+       A dark-themed, responsive portfolio for Procreate illustrations.
+       Built with semantic HTML5, CSS custom properties, Flexbox & Grid.
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <!-- Responsive viewport — essential for mobile scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO meta tags -->
+  <meta name="description" content="Digital illustrations portfolio showcasing Procreate artwork." />
+  <meta name="author" content="Your Name" />
+
+  <title>Art Portfolio | Digital Illustrations</title>
+
+  <!-- Google Fonts (optional — swap for a self-hosted font to avoid the
+       external request if you prefer full offline support) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+
+  <!-- ===========================================================
+       NAVIGATION BAR
+       Fixed bar at the top; uses Flexbox to keep the logo on the
+       left and the nav links on the right.
+       =========================================================== -->
+  <header>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="container navbar__inner">
+
+        <!-- Brand / logo — links back to the top of the page -->
+        <a href="#hero" class="navbar__logo">✦ ArtFolio</a>
+
+        <!-- Navigation links — smooth-scroll to each section -->
+        <ul class="navbar__links" role="list">
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- ===========================================================
+       HERO SECTION
+       Full-viewport-height intro with a brief bio and CTA buttons.
+       Uses Flexbox to vertically centre the content.
+       =========================================================== -->
+  <section id="hero" class="hero" aria-labelledby="hero-heading">
+    <div class="container">
+      <div class="hero__content">
+
+        <!-- Eyebrow label -->
+        <p class="hero__eyebrow">Digital Illustrator &amp; Visual Artist</p>
+
+        <!-- Main headline — replace "Your Name" with your name -->
+        <h1 id="hero-heading" class="hero__heading">
+          Hi, I'm <span class="accent">Your Name</span>.<br />
+          I create worlds<br />one stroke at a time.
+        </h1>
+
+        <!-- Short bio paragraph -->
+        <p class="hero__bio">
+          I'm a self-taught digital illustrator passionate about character design,
+          fantastical landscapes, and vibrant colour work — all crafted on an
+          iPad using <strong>Procreate</strong>. Welcome to my portfolio.
+        </p>
+
+        <!-- Call-to-action buttons -->
+        <div class="hero__cta">
+          <!-- Primary CTA — scrolls to gallery -->
+          <a href="#gallery" class="btn btn--primary">View My Work</a>
+          <!-- Secondary CTA — scrolls to contact -->
+          <a href="#contact" class="btn btn--outline">Get in Touch</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===========================================================
+       GALLERY SECTION
+       Responsive CSS Grid of artwork cards.
+
+       HOW TO ADD YOUR OWN IMAGES:
+         1. Place your image files inside assets/img/
+         2. For each piece, copy one <article class="gallery__card"> block.
+         3. Replace the data-placeholder attribute text.
+         4. Add an <img> tag inside .gallery__card-img:
+              <img src="assets/img/your-file.jpg" alt="Descriptive alt text" />
+         5. Update the title and tag text.
+       =========================================================== -->
+  <section id="gallery" class="gallery" aria-labelledby="gallery-heading">
+    <div class="container">
+
+      <!-- Section header -->
+      <div class="gallery__header">
+        <h2 id="gallery-heading" class="section-title">Gallery</h2>
+        <p class="section-subtitle">A selection of my Procreate illustrations.</p>
+      </div>
+
+      <!-- Gallery grid — CSS Grid auto-fills columns (min 260 px each) -->
+      <div class="gallery__grid" role="list">
+
+        <!-- ── Card 1 ─────────────────────────────────────────── -->
+        <!-- To add an image: place your file in assets/img/ and add
+             <img src="assets/img/artwork-1.jpg" alt="..."> inside
+             the .gallery__card-img div below.                     -->
+        <article class="gallery__card" role="listitem">
+          <div
+            class="gallery__card-img"
+            data-placeholder="artwork-1.jpg"
+          >
+            <!-- <img src="assets/img/artwork-1.jpg" alt="Artwork title 1" /> -->
+          </div>
+          <div class="gallery__card-info">
+            <h3 class="gallery__card-title">Artwork Title 1</h3>
+            <span class="gallery__card-tag">Character Design</span>
+          </div>
+        </article>
+
+        <!-- ── Card 2 ─────────────────────────────────────────── -->
+        <article class="gallery__card" role="listitem">
+          <div
+            class="gallery__card-img"
+            data-placeholder="artwork-2.jpg"
+          >
+            <!-- <img src="assets/img/artwork-2.jpg" alt="Artwork title 2" /> -->
+          </div>
+          <div class="gallery__card-info">
+            <h3 class="gallery__card-title">Artwork Title 2</h3>
+            <span class="gallery__card-tag">Landscape</span>
+          </div>
+        </article>
+
+        <!-- ── Card 3 ─────────────────────────────────────────── -->
+        <article class="gallery__card" role="listitem">
+          <div
+            class="gallery__card-img"
+            data-placeholder="artwork-3.jpg"
+          >
+            <!-- <img src="assets/img/artwork-3.jpg" alt="Artwork title 3" /> -->
+          </div>
+          <div class="gallery__card-info">
+            <h3 class="gallery__card-title">Artwork Title 3</h3>
+            <span class="gallery__card-tag">Fan Art</span>
+          </div>
+        </article>
+
+        <!-- ── Card 4 ─────────────────────────────────────────── -->
+        <article class="gallery__card" role="listitem">
+          <div
+            class="gallery__card-img"
+            data-placeholder="artwork-4.jpg"
+          >
+            <!-- <img src="assets/img/artwork-4.jpg" alt="Artwork title 4" /> -->
+          </div>
+          <div class="gallery__card-info">
+            <h3 class="gallery__card-title">Artwork Title 4</h3>
+            <span class="gallery__card-tag">Portrait</span>
+          </div>
+        </article>
+
+        <!-- ── Card 5 ─────────────────────────────────────────── -->
+        <article class="gallery__card" role="listitem">
+          <div
+            class="gallery__card-img"
+            data-placeholder="artwork-5.jpg"
+          >
+            <!-- <img src="assets/img/artwork-5.jpg" alt="Artwork title 5" /> -->
+          </div>
+          <div class="gallery__card-info">
+            <h3 class="gallery__card-title">Artwork Title 5</h3>
+            <span class="gallery__card-tag">Abstract</span>
+          </div>
+        </article>
+
+        <!-- ── Card 6 ─────────────────────────────────────────── -->
+        <article class="gallery__card" role="listitem">
+          <div
+            class="gallery__card-img"
+            data-placeholder="artwork-6.jpg"
+          >
+            <!-- <img src="assets/img/artwork-6.jpg" alt="Artwork title 6" /> -->
+          </div>
+          <div class="gallery__card-info">
+            <h3 class="gallery__card-title">Artwork Title 6</h3>
+            <span class="gallery__card-tag">Concept Art</span>
+          </div>
+        </article>
+
+      </div><!-- /.gallery__grid -->
+    </div><!-- /.container -->
+  </section>
+
+
+  <!-- ===========================================================
+       ABOUT ME SECTION
+       Two-column grid: avatar placeholder (left) + bio text (right).
+       Collapses to a single column on tablet/mobile via media query.
+       =========================================================== -->
+  <section id="about" class="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about__inner">
+
+        <!-- Avatar / self-portrait placeholder ─────────────────
+             To add your photo:
+               <img src="assets/img/avatar.jpg" alt="Photo of Your Name" />
+             inside the .about__avatar div.                       -->
+        <div class="about__avatar">
+          <div class="about__avatar-placeholder" aria-hidden="true">
+            📷 Add your photo to<br />assets/img/avatar.jpg
+          </div>
+          <!-- <img src="assets/img/avatar.jpg" alt="Photo of Your Name" /> -->
+        </div>
+
+        <!-- Bio text column -->
+        <div class="about__text">
+          <h2 id="about-heading" class="section-title">About Me</h2>
+
+          <p class="about__body">
+            Hey there! I'm <strong class="accent">Your Name</strong>, a digital illustrator
+            based in <strong>City, Country</strong>. I've been drawing since I could hold a pencil,
+            and discovered Procreate in 2020 — it completely changed the way I create.
+          </p>
+
+          <p class="about__body">
+            My work spans character design, environmental concept art, and experimental
+            abstract pieces. I draw inspiration from mythology, nature, and video games.
+            When I'm not illustrating, you'll find me hiking or trying to beat my own high score.
+          </p>
+
+          <!-- Tools / skills tags -->
+          <ul class="about__skills" aria-label="Tools and skills">
+            <li><span class="about__skill-tag">Procreate</span></li>
+            <li><span class="about__skill-tag">iPad Pro</span></li>
+            <li><span class="about__skill-tag">Character Design</span></li>
+            <li><span class="about__skill-tag">Concept Art</span></li>
+            <li><span class="about__skill-tag">Colour Theory</span></li>
+            <li><span class="about__skill-tag">Digital Painting</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===========================================================
+       CONTACT FOOTER
+       Centred layout with a heading, short blurb, and social links.
+       Replace the href="#" values with your real contact URLs.
+       =========================================================== -->
+  <footer id="contact" class="footer" aria-labelledby="contact-heading">
+    <div class="container footer__inner">
+
+      <h2 id="contact-heading" class="footer__heading">
+        Let's <span class="accent">Connect</span>
+      </h2>
+
+      <p class="footer__sub">
+        Interested in a commission, collaboration, or just want to say hello?
+        Reach out — I'd love to hear from you.
+      </p>
+
+      <!-- Social / contact links — replace href="#" with real URLs -->
+      <ul class="footer__links" role="list">
+        <li>
+          <!-- Replace with your real email address -->
+          <a href="mailto:hello@example.com" class="footer__link" aria-label="Send an email">
+            ✉ Email Me
+          </a>
+        </li>
+        <li>
+          <!-- Replace with your Instagram profile URL -->
+          <a href="https://instagram.com/" class="footer__link" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile">
+            📸 Instagram
+          </a>
+        </li>
+        <li>
+          <!-- Replace with your ArtStation profile URL -->
+          <a href="https://www.artstation.com/" class="footer__link" target="_blank" rel="noopener noreferrer" aria-label="ArtStation profile">
+            🎨 ArtStation
+          </a>
+        </li>
+        <li>
+          <!-- Replace with your Twitter/X profile URL -->
+          <a href="https://twitter.com/" class="footer__link" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X profile">
+            𝕏 Twitter / X
+          </a>
+        </li>
+      </ul>
+
+      <!-- Copyright line — update the year and name -->
+      <p class="footer__copy">
+        &copy; <span id="year"></span> Your Name. All rights reserved.
+      </p>
+
+    </div><!-- /.footer__inner -->
+  </footer>
+
+
+  <!-- ===========================================================
+       INLINE JAVASCRIPT
+       Tiny scripts that don't warrant a separate file.
+       =========================================================== -->
+  <script>
+    /* ── Auto-update copyright year ───────────────────────────
+       Reads the current year from the browser's Date object so
+       you never need to manually update it.                     */
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
